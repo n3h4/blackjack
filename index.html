@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>BitCoin</title>
+
+</head>
+
+<body>
+  <div id="app">
+    <div class="">
+      <h1 class="header"><span class="fa fa-btc" aria-hidden="true"></span>itcoin Games</h1>
+      <nav class="navbar">
+        <div class="">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <router-link to="/blackjack" class="nav-link">BLACKJACK</router-link>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">VIDEO POKER</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">ROULETTE</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">CRAPS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">KENO</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">SLOTS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">DICE</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+      <router-view class="view"></router-view>
+
+    </div>
+
+  </div>
+  
+ 
+  <script type="text/x-template" id="blackjack">
+    <div class="blackjack-container">
+
+
+      <div class="card-container">
+        <div id="cards">
+          <img src="../img/backcover.jpg" alt="" class="card1">
+          <img src="../img/backcover.jpg" alt="" class="card2">
+        </div>
+
+        <div id="cards-two">
+          <img src="../img/backcover.jpg" alt="" class="card3">
+          <img src="../img/backcover.jpg" alt="" class="card4">
+        </div>
+      </div><br>
+
+
+
+      <div class="buttons-container">
+        <button class="butn auto-butn"><b>AUTO</b></button>
+        <button class="butn"><b>DOUBLE</b></button>
+        <button class="butn"><b>SPLIT</b></button>
+        <button class="butn change-butn"><b>CHANGE BET</b></button>
+        <button class="butn"><b>HIT</b></button>
+        <button class="butn"><b>STAND</b></button>
+        <button class="butn draw-butn" v-on:click="fetchCards"><b>DRAW</b></button>
+
+      </div>
+    </div>
+  </script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.24.1/ramda.min.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="./js/main.js"></script>
+
+  <script>
+    const routes = [
+      { path: '/', component: blackjack },
+      { path: '/blackjack', component: blackjack }
+    ]
+
+    const router = new VueRouter({ routes });
+
+    const myApp = new Vue({
+      router
+    }).$mount('#app')
+  </script>
+
+</body>
+
