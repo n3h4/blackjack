@@ -1,165 +1,162 @@
-
 .header {
-    background-color: #e0a5f7;
-    color: white;
-    padding: 50px 0px 15px 0px;
-    margin: 0px;
-    font-size: 80px;
-    text-align: center;
-  }
+  background-color: #e0a5f7;
+  color: white;
+  padding: 50px 0px 15px 0px;
+  margin: 0px;
+  font-size: 80px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #cf70f4;
+  border-radius: 0px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-pills {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+a:hover {
+  color: whitesmoke;
+}
+
+.nav-link {
+  color: #e5daea
+}
+
+.card-container {
+  width: 230px;
+  height: 530px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card1 {
+  position: absolute;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.card2 {
+  left: 33%;
+  z-index: 20;
+  border-radius: 6px;
+  position: absolute;
+}
+
+.card3 {
+  border-radius: 6px;
+  position: absolute;
+  top: 53%;
+  z-index: 10;
+}
+
+.card4 {
+  top: 53%;
+  left: 33%;
+  z-index: 20;
+  border-radius: 6px;
+  position: absolute;
+}
+
+.blackjack-container {
+  background: #222D33;
+
+}
+
+.shuffle-card {
+  display: flex;
+  margin-left: 75px;
+}
+
+.deck-card {
+  border-radius: 6px;
+  margin-left: -80px;
+  margin-bottom: 50px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.butn {
+  color: white;
+  background: #323D43;
+  border-radius: 4px;
+  padding: 5px 20px 5px 20px;
+  border: none;
+  cursor: pointer;
   
-  .navbar {
-    background-color: #cf70f4;
-    border-radius: 0px;
-    color: white;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .nav-pills {
-      font-size: 20px;
-      font-weight: bold;
-      margin:0 auto;
-     
-  }
-  
-  a:hover {
-    color: whitesmoke;
-  }
-  
-  .nav-link {
-    color: #e5daea
-  }
-  
-  .card-container {
-    width: 230px;
-    height: 530px;
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  .card1 {
-    position: absolute;
-    border-radius: 6px;
-    z-index: 10;
-  }
-  
-  .card2 {
-    left: 33%;
-    z-index: 20;
-    border-radius: 6px;
-    position: absolute;
-  }
-  
-  .card3 {
-    border-radius: 6px;
-    position: absolute;
-    top: 53%;
-    z-index: 10;
-  }
-  
-  .card4 {
-    top: 53%;
-    left: 33%;
-    z-index: 20;
-    border-radius: 6px;
-    position: absolute;
-  }
-  
-  .blackjack-container {
-    background: #222D33;
-  }
-  
-  .shuffle-card {
-      display: flex;
-      margin-left: 75px;
-     
-  }
-  
-  .deck-card {
-      border-radius: 6px;  
-      margin-left: -80px; 
-      margin-bottom: 50px;
-  }
-  
-  .buttons-container {
-      display: flex;
-      justify-content: center;
-  }
-  
-  .butn {
-      color: white;
-      background: #323D43;
-      border-radius: 4px;
-      padding: 5px 20px 5px 20px;
-      outline: none;
-      border: none;
-      
-  }
-  
-  .change-butn {
-    margin: 0px 60px 0px 60px;
-  }
-  
-  .draw-butn {
-    background-color: #7CB342;
-  }
-  
-  .auto-butn {
-      background-color: #7CB342;
-     
-  }
-  
-  @media only screen and (max-width:480px) {
-  
-   .deck-card > img {
-     width: 100px;
-     height: 180px;
-     margin-left: 20px;
-     
-  
-  
-   }
-   .card-container > #cards > img{
-     width: 100px;
-     height: 180px;
-  
-   }
-   .card-container > #cards-two > img{
+}
+
+button:focus {
+  outline: none;
+}
+
+.change-butn {
+  margin: 0px 60px 0px 60px;
+}
+
+.draw-butn {
+  background-color: #7CB342;
+}
+
+.auto-butn {
+  background-color: #7CB342;
+}
+
+#spinner {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 60px;
+}
+
+@media only screen and (max-width:480px) {
+  .deck-card>img {
     width: 100px;
     height: 180px;
-  
+    margin-left: 20px;
   }
-  .card-container{
+  .card-container>#cards>img {
+    width: 100px;
+    height: 180px;
+  }
+  .card-container>#cards-two>img {
+    width: 100px;
+    height: 180px;
+  }
+  .card-container {
     width: 150px;
     height: 430px;
   }
   .shuffle-card {
     display: flex;
     margin-left: 75px;
-   
   }
-    .butn {
-      padding: 0px 5px 0px 5px;
-      margin-left: 3px;
-      font-size: 12px;
-    } 
-  
-    .change-butn {
-      margin: 0px 0px 0px 3px;
-    }
-    .nav-pills {
-      font-size: 12px;
-      font-weight: bold;
-      margin:0 auto;
-     
+  .butn {
+    padding: 0px 5px 0px 5px;
+    margin-left: 3px;
+    font-size: 12px;
   }
-  
-  .header{
+  .change-butn {
+    margin: 0px 0px 0px 3px;
+  }
+  .nav-pills {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+  .header {
     font-size: 25px;
     padding: 10px 0px 10px 0px;
-  
-  font-weight: bold;}
-  
+    font-weight: bold;
   }
-  
+}
